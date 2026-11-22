@@ -1,5 +1,5 @@
 * { box-sizing: border-box; }
-body { margin: 0; font-family: Tahoma, Arial, sans-serif; background: #fffaf5; color: #35131f; }Background;
+body { margin: 0; font-family: Tahoma, Arial, sans-serif; background: #fffaf5; color: #35131f; }Background FEFAEDA;
 header { display:flex; justify-content:space-between; align-items:center; padding:22px 8%; background:#571b32; color:#fff; }
 .brand { font-size:28px; font-weight:bold; color:#e7c879; }
 main { max-width:1000px; margin:40px auto; padding:0 20px; }
