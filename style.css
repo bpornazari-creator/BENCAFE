@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Tahoma, Arial, sans-serif; background: #fffaf5; color: #35131f; }
+header { display:flex; justify-content:space-between; align-items:center; padding:22px 8%; background:#571b32; color:#fff; }
+.brand { font-size:28px; font-weight:bold; color:#e7c879; }
+main { max-width:1000px; margin:40px auto; padding:0 20px; }
+.hero { text-align:center; padding:65px 20px; border-radius:22px; background:linear-gradient(135deg,#571b32,#8a3450); color:white; }
+.eyebrow { color:#f0d58d; }
+h1 { font-size:clamp(30px,5vw,48px); margin:12px 0; }
+button { border:0; border-radius:10px; padding:13px 28px; background:#e7c879; color:#35131f; font-weight:bold; cursor:pointer; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px; margin-top:25px; }
+article { padding:24px; border:1px solid #ead9d0; border-radius:16px; background:white; }
+footer { text-align:center; padding:30px; color:#795c63; }
