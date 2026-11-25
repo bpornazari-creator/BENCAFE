@@ -24,8 +24,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Install Android SDK packages
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
       - name: Install dependencies
         run: npm install
       - name: Generate Android native project
@@ -64,7 +66,10 @@ jobs:
       - name: Build iOS simulator app
         run: |
           cd ios
-          xcodebuild -workspace *.xcworkspace -scheme bankcafe -configuration Debug -sdk iphonesimulator -derivedDataPath build CODE_SIGNING_ALLOWED=NO
+          xcodebuild -list -workspace *.xcworkspace
+          SCHEME="$(xcodebuild -list -workspace *.xcworkspace | sed -n '/Schemes:/,$p' | sed -n '2{s/^[[:space:]]*//;p;q;}')"
+          test -n "$SCHEME"
+          xcodebuild -workspace *.xcworkspace -scheme "$SCHEME" -configuration Debug -sdk iphonesimulator -derivedDataPath build CODE_SIGNING_ALLOWED=NO
       - name: Package iOS simulator app
         run: |
           cd ios/build/Build/Products/Debug-iphonesimulator
