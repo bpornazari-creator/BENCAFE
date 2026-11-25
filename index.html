@@ -3,25 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>بن‌کافه | نمونه اولیه</title>
+  <meta name="theme-color" content="#571b32">
+  <meta name="description" content="بن‌کافه؛ کافه‌ای برای دورهمی‌های خوب و بازی مافیا.">
+  <title>بن‌کافه | طعم خوب یک دورهمی</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><div class="brand">بن‌کافه</div><span>کافه‌ای برای دورهمی‌های خوب</span></header>
-  <main>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="بن‌کافه، صفحه اصلی">بن‌کافه</a>
+    <nav class="main-nav" aria-label="ناوبری اصلی">
+      <a href="#menu">منوی کافه</a>
+      <a href="#mafia">دورهمی مافیا</a>
+      <a href="#orders">سفارش‌ها</a>
+    </nav>
+  </header>
+
+  <main id="home">
     <section class="hero">
       <p class="eyebrow">به بن‌کافه خوش آمدید</p>
       <h1>طعم خوبِ یک دورهمی</h1>
-      <p>این فقط نسخه‌ی نمایشی اولیه‌ی صفحه اصلی بن‌کافه است.</p>
-      <button id="orderButton">دیدن منو</button>
+      <p class="hero-copy">جایی برای نوشیدنی‌های دلچسب، گفت‌وگوهای دوستانه و شب‌های بازی.</p>
+      <a class="primary-button" href="#menu">دیدن منوی کافه</a>
     </section>
-    <section class="tiles">
-      <article><h2>منوی کافه</h2><p>نوشیدنی‌ها و خوراکی‌های محبوب</p></article>
-      <article><h2>بازی مافیا</h2><p>اطلاعات و برنامه دورهمی‌ها</p></article>
-      <article><h2>سفارش‌ها</h2><p>در نسخه‌های بعدی فعال می‌شود</p></article>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">تجربهٔ بن‌کافه</p>
+      <h2 id="intro-title">برای لحظه‌هایی که کنار هم می‌گذرد</h2>
+      <p>از منوی کافه تا دورهمی‌های مافیا، بخش‌های بن‌کافه را از همین‌جا دنبال کنید.</p>
+    </section>
+
+    <section class="tiles" aria-label="بخش‌های بن‌کافه">
+      <a class="tile" href="#menu">
+        <span class="tile-icon" aria-hidden="true">☕</span>
+        <h2>منوی کافه</h2>
+        <p>نوشیدنی‌ها و خوراکی‌های بن‌کافه</p>
+        <span class="tile-link">مشاهده بخش <span aria-hidden="true">←</span></span>
+      </a>
+      <a class="tile" href="#mafia">
+        <span class="tile-icon" aria-hidden="true">♟</span>
+        <h2>بازی مافیا</h2>
+        <p>اطلاعات دورهمی‌ها و برنامهٔ سانس‌ها</p>
+        <span class="tile-link">مشاهده بخش <span aria-hidden="true">←</span></span>
+      </a>
+      <a class="tile" href="#orders">
+        <span class="tile-icon" aria-hidden="true">▤</span>
+        <h2>سفارش‌ها</h2>
+        <p>اطلاع از وضعیت راه‌اندازی سفارش آنلاین</p>
+        <span class="tile-link">مشاهده بخش <span aria-hidden="true">←</span></span>
+      </a>
+    </section>
+
+    <section class="detail-section" id="menu">
+      <div>
+        <p class="eyebrow">منوی بن‌کافه</p>
+        <h2>یک انتخاب خوش‌طعم در راه است</h2>
+        <p>فهرست محصولات، توضیحات و قیمت‌ها پس از دریافت منوی تأییدشدهٔ کافه در این بخش قرار می‌گیرد.</p>
+      </div>
+      <div class="status-card">
+        <span class="status-dot" aria-hidden="true"></span>
+        <strong>منو در حال آماده‌سازی</strong>
+        <span>هنوز محصول یا قیمت تأییدشده‌ای برای نمایش ثبت نشده است.</span>
+      </div>
+    </section>
+
+    <section class="detail-section alternate" id="mafia">
+      <div>
+        <p class="eyebrow">دورهمی‌های بن‌کافه</p>
+        <h2>شب‌های مافیا</h2>
+        <p>اطلاعات سانس‌ها، ظرفیت و قوانین بازی پس از نهایی‌شدن برنامهٔ کافه منتشر می‌شود.</p>
+      </div>
+      <div class="status-card">
+        <span class="status-dot" aria-hidden="true"></span>
+        <strong>برنامهٔ سانس‌ها هنوز ثبت نشده</strong>
+        <span>برای جلوگیری از نمایش اطلاعات نادرست، زمان یا ظرفیت فرضی درج نشده است.</span>
+      </div>
+    </section>
+
+    <section class="detail-section" id="orders">
+      <div>
+        <p class="eyebrow">سفارش آنلاین</p>
+        <h2>سفارش راحت‌تر، در مرحلهٔ بعد</h2>
+        <p>ثبت سفارش زمانی فعال می‌شود که منوی نهایی، روش دریافت سفارش و فرایند پرداخت مشخص شوند.</p>
+      </div>
+      <div class="status-card">
+        <span class="status-dot pending" aria-hidden="true"></span>
+        <strong>ثبت سفارش هنوز فعال نیست</strong>
+        <span>این صفحه در حال حاضر سفارش یا پرداخت واقعی انجام نمی‌دهد.</span>
+      </div>
     </section>
   </main>
-  <footer>© بن‌کافه — نمونه اولیه</footer>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">بن‌کافه</a>
+    <p>کافه‌ای برای دورهمی‌های خوب</p>
+    <small>© <span id="year"></span> بن‌کافه</small>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
