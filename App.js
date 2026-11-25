@@ -56,7 +56,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.safe}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.burgundy} />
+      <StatusBar barStyle="light-content" />
       <View style={styles.header}>
         <View>
           <Text style={styles.brand}>بن‌کافه</Text>
