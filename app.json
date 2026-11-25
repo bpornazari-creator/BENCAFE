@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "bankcafe",
+    "experiments": {
+      "baseUrl": "/BENCAFE"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.bankcafe.app"
