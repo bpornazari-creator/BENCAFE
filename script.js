@@ -1,3 +1,1 @@
-document.getElementById("orderButton").addEventListener("click", () => {
-  alert("منو در نسخه بعدی اضافه می‌شود.");
-});
+document.getElementById("year").textContent = new Date().getFullYear();
