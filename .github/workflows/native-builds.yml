@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   android:
-    name: Android debug APK
+    name: Android standalone release APK
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -51,16 +51,16 @@ jobs:
         run: npm install
       - name: Generate Android native project
         run: npx expo prebuild --platform android --non-interactive
-      - name: Build debug APK
+      - name: Build standalone release APK
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleRelease
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
-          name: bankcafe-android-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: bankcafe-android-standalone-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
           if-no-files-found: error
           retention-days: 14
 
